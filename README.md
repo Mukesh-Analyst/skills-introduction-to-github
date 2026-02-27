@@ -80,3 +80,16 @@ A detailed product requirements and technical blueprint for a **Lead Optimizatio
 
 - [docs/lead-optimization-crm-prd.md](docs/lead-optimization-crm-prd.md)
 - Interactive frontend prototype: [docs/lead-optimization-crm-app/index.html](docs/lead-optimization-crm-app/index.html)
+
+
+## Try the CRM Prototype Locally
+
+You can run and check the CRM prototype with a local static server:
+
+```bash
+python -m http.server 4173
+```
+
+Then open:
+
+- http://localhost:4173/docs/lead-optimization-crm-app/index.html
