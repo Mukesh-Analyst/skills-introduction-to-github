@@ -79,3 +79,4 @@ Get help: [Post in our discussion board](https://github.com/orgs/skills/discussi
 A detailed product requirements and technical blueprint for a **Lead Optimization CRM** is available at:
 
 - [docs/lead-optimization-crm-prd.md](docs/lead-optimization-crm-prd.md)
+- Interactive frontend prototype: [docs/lead-optimization-crm-app/index.html](docs/lead-optimization-crm-app/index.html)

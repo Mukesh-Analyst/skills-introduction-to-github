@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Optimization CRM</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Lead Optimization CRM</h1>
+      <p>Conversion engine for disciplined sales follow-up.</p>
+    </div>
+    <div class="topbar-actions">
+      <button id="run-missed-check">Run Missed Lead Check</button>
+      <button id="toggle-view">Switch to Kanban</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="kpis" id="kpis"></section>
+
+    <section class="controls card">
+      <h2>Filters</h2>
+      <div class="filters-grid">
+        <input id="search" placeholder="Search lead, company, phone, email" />
+        <select id="filter-salesperson"><option value="">All Salespeople</option></select>
+        <select id="filter-source"><option value="">All Sources</option></select>
+        <select id="filter-stage">
+          <option value="">All Stages</option>
+          <option value="Hot">Hot</option>
+          <option value="Warm">Warm</option>
+          <option value="Cold">Cold</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="content">
+      <div id="table-view" class="card"></div>
+      <div id="kanban-view" class="card hidden"></div>
+      <aside class="card" id="right-rail">
+        <div>
+          <h2>Notifications</h2>
+          <ul id="notifications"></ul>
+        </div>
+        <div>
+          <h2>Daily Summary</h2>
+          <ul id="daily-summary"></ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <dialog id="lead-dialog">
+    <article>
+      <header class="dialog-header">
+        <h3 id="lead-title"></h3>
+        <button id="close-dialog">✕</button>
+      </header>
+      <section id="lead-meta"></section>
+      <section>
+        <h4>Update Lead</h4>
+        <div class="update-grid">
+          <select id="edit-status"></select>
+          <select id="edit-stage">
+            <option value="Hot">Hot</option>
+            <option value="Warm">Warm</option>
+            <option value="Cold">Cold</option>
+          </select>
+          <input id="edit-followup" type="date" />
+          <button id="save-lead">Save Update</button>
+        </div>
+      </section>
+      <section>
+        <h4>Activity Timeline</h4>
+        <ul id="lead-activities" class="timeline"></ul>
+      </section>
+      <section>
+        <h4>Add Comment</h4>
+        <div class="comment-row">
+          <input id="comment-input" placeholder="@username mention supported" />
+          <button id="add-comment">Add</button>
+        </div>
+      </section>
+    </article>
+  </dialog>
+
+  <script src="./script.js"></script>
+</body>
+</html>
